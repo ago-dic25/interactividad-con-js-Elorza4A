@@ -4,69 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Spot</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
+
+    <!-- Estilos css -->
     <link rel="stylesheet" href="estilos.css">
-    <!--<script src="https://kit.fontawesome.com/6d11003e79.js" crossorigin="anonymous"></script>-->
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="">
-        <nav>
-            
-            <button id="menu">Menu</button>
+
+    <header class="contenedor header">
+        <a class="navegacion-logo" href="index.html"><img src="img/logo.png" alt="logo"></a>
+        
+
+        <nav class="navegacion-principal">
             <ul>
-                <li>
-                    <a href="#">Articles</a>
-                </li>
-                <li>
-                    <a href="#">Radio</a>
-                </li>
-                <li>
-                    <a href="#">Podcast</a>
-                </li>
-                 <li>
-                    <a href="#">Crear Cuenta / Registro</a>
-                </li>
+                <li><a href="#">Articles <sup>(460)</sup></a></li>
+                <li><a href="#">Radio <sup>(8)</sup></a></li>
+                <li><a href="#">Podcast <sup>(46)</sup></a></li>
+                <li><a href="#">Beawriter <sup></sup></a></li>
+                <li><a href="#">Talktous <sup></sup></a></li>
+                <li><a href="registro.html" target="_blank" >Crear cuenta <sup></sup></a></li>
+
             </ul>
-            <button id="buscar">
-                Buscar
-            </button>
         </nav>
+
+        <div class="navegacion-secundaria">
+            <button class="boton__lupa hover" id="buscar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#FFFFFF" d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"/></svg>
+            </button>
+
+            <input type="text" class="ocultar texto">
+
+            <input class="boton hover" type="button" value="Menu">
+        </div>
     </header>
     
-    <main>
-        <section>
-            <div class="tarjeta" id="bestOfTheWeek">
-                <h1>Best of the week</h1>
-                <a href="#">See all posts</a>
-            </div>
-            <div class="tarjeta" id="travel">
-                <span>Sep 06, 2022</span>
-                <button>Travel</button>
-                <img src="imagenes/arnel-hasanovic-MNd-Rka1o0Q-unsplash.jpg" width="50%" alt="">
-                <div class="info">
-                    <span>Travel</span>
-                    <h2>TravelPro</h2>
+    <div class="contenedor centrar">
+        <div class="contenido-inicio">
+            <h1>Best of the week</h1>
+            <a href="#" id="verTodos">See all the posts →</a>
+        </div>
+
+        <div class="posts ocultar" id="posts">
+            <div class="post">Mejores lugares turísticos de la temporada</div>
+            <div class="post">Zonas arquelogicas en México</div>
+            <div class="post">Las playas más hermosas de Ámerica</div>
+            <div class="post" style="margin-bottom: 20px;">Viajes baratos y buenos</div>
+        </div>
+    </div>
+
+
+
+    <div class="contenedor centrar contenido">
+        <main class="contenido-main">
+            <div class="contenido-principal">
+                <div class="botones">
+                    <input class="boton__bonito boton__blanco hover" type="button" value="Sep 06, 2022">
+                    <br>
+                    <input class="boton__bonito boton__transparente hover" type="button" value="• Travel">
                 </div>
+
+                <div class="contenido-principal__texto">
+                    <span>• Travel</span>
+                    <br>
+                    <h2>Get to your dream now destinations with Travel Pro</h2>
+                </div>
+
+                <button class="boton__flecha hover"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z"/></svg></button>
             </div>
-        </section>
+        </main>
+
         <aside>
-            <div class="tarjeta" id="ads">
-                <span>ADS</span>
-                <button>+</button>
-                <span>Become a podcaster</span>
-                <h3>Real talk</h3>
-            </div>
-            <div  class="tarjeta" id="seeAll">
-                <img src="imagenes/soundtrap-n30_i7mx62o-unsplash.jpg" alt="" width="50%">
-                <button>See all pics</button>
+            <div class="aside-1">
+                <div class="aside-1-botones">
+                    <input class="boton__bonito no-margin boton__transparente hover" type="button" value="• ADS">
+                    <input class="boton__lupa boton__mas hover" id="mas" type="button" value="+">
+                </div>
+
+                <div class="aside-1-texto">
+                    <p>Become A BROADCAST MEMBER</p>
+                    <h3>Real talk in a corporate world</h3>
+                    <a href="#">Learn more</a>
+                </div>
+
+            </div >
+
+            <div class="aside-2">
+                    <button class="boton__flecha hover"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z"/></svg></button>
+                    <br>
+                    <input class="boton__bonito boton__blanco hover" type="button" value="See all picks →">
+                    
             </div>
         </aside>
-    </main>
+    </div>
+    
+
 </body>
-<script src="index.js"></script>
+
+    <!-- Script -->
+     <script src="index.js"></script>
 </html>
